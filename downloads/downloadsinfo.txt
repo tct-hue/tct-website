@@ -1,1 +1,3 @@
 https://drive.google.com/file/d/1Z7HWU0RIE14Qo2FSHNXwCchReQ4NfZ4h/view?usp=drivesdk
+
+https://github.com/tct-hue/tct-website/releases/download/2.0/TCT-Typing-Tutor.zip
