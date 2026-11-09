@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://travelcomputertraining.pages.dev/sitemap.xml
