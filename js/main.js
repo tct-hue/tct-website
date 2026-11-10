@@ -230,18 +230,23 @@ document.addEventListener("DOMContentLoaded", () => {
         note: document.getElementById("studentNote").value.trim()
       };
 
-      const originalBtnText = submit.innerText;
-      submit.disabled = true;
-      submit.innerText = "စာရင်းပေးသွင်းနေပါသည်... ခေတ္တစောင့်ပါ";
+      const submitBtn = document.getElementById("submitBtn");
+...
+const originalBtnText = submitBtn ? submitBtn.innerText : "စာရင်းပေးသွင်းမည်";
+if (submitBtn) {
+  submitBtn.disabled = true;
+  submitBtn.innerText = "စာရင်းပေးသွင်းနေပါသည်... ခေတ္တစောင့်ပါ";
+}
 
-      fetch(GOOGLE_SCRIPT_URL, {
-        method: "POST", 
-        body; JSON.stringify(payload)
-      })
+      const response = await fetch(GOOGLE_SCRIPT_URL, {
+  method: "POST",
+  headers: { "Content-Type": "text/plain;charset=utf-8" },
+  body: JSON.stringify(payload)
+})
       .then(response => response.json())
       .then(result => {
         if(result.status === "success") {
-          alert(`ကျေးဇူးတင်ပါသည် ${payload.name}။ (${payload.course}) သင်တန်းအတွက် စာရင်းပေးသွင်းမှု (သို့) စုံစမ်းမေးမြန်းမှုကို လက်ခံရရှိပါသည်။ သင်တန်းမှူးထံ တင်ပြပြီး အတည်ပြုချက်ရသောအခါ သင်တန်းမှ ပြန်လည်ဆက်သွယ်ပေးပါမည်။`);
+          showStatus(`✓ ကျေးဇူးတင်ပါသည် <strong>${escapeHtml(payload.name)}</strong>။ (${escapeHtml(payload.course)}) သင်တန်းအတွက် စာရင်းပေးသွင်းမှုကို လက်ခံရရှိပါသည်။ သင်တန်းမှူးထံ တင်ပြပြီး အတည်ပြုချက်ရရှိပါက ဖုန်း <strong>${escapeHtml(payload.phone)}</strong> သို့ ပြန်လည်ဆက်သွယ်ပေးပါမည်။<br><br>အရေးကြီးပါက ဖုန်း <strong><a href="tel:0943045506">09 43045506</a></strong> သို့မဟုတ် <a href="https://www.facebook.com/travelcomputertraining" target="_blank" rel="noopener noreferrer">Travel Computer Training Facebook Page</a> သို့လည်း တိုက်ရိုက် ဆက်သွယ်စုံစမ်းနိုင်ပါသည်။`, "success");
           regForm.reset();
         } else {
           alert('စာရင်းပေးရာတွင် အခက်အခဲ ရှိနေပါသည်။ ကျေးဇူးပြု၍ ဖုန်း 09 43045506 သို့ (Travel Computer Training) facebook page သို့ တိုက်ရိုက် ဆက်သွယ်ပေးပါ။ ');
