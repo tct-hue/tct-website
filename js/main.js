@@ -215,7 +215,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
    // 12. Handle Registration Form
   const regForm = document.getElementById("registrationForm");
-  const submitBtn = document.getElementById("submit");
+  const submitBtn = document.getElementById("submitBtn");
   const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbyWU6_xH67GwIAHVbTaBVFfCGn9y-smEfzqATFLJZZElomvuTZgzxb18iT6XgjhZshwTA/exec";
 
   if (regForm) {
@@ -229,11 +229,9 @@ document.addEventListener("DOMContentLoaded", () => {
         course: document.getElementById("studentCourse").value.trim(),
         note: document.getElementById("studentNote").value.trim()
       };
-
-      const submitBtn = document.getElementById("submitBtn");
-...
+      
 const originalBtnText = submitBtn ? submitBtn.innerText : "စာရင်းပေးသွင်းမည်";
-if (submitBtn) {
+ if (submitBtn) {
   submitBtn.disabled = true;
   submitBtn.innerText = "စာရင်းပေးသွင်းနေပါသည်... ခေတ္တစောင့်ပါ";
 }
@@ -242,8 +240,8 @@ if (submitBtn) {
   method: "POST",
   headers: { "Content-Type": "text/plain;charset=utf-8" },
   body: JSON.stringify(payload)
-})
-      .then(response => response.json())
+  })
+        .then(response => response.json())
       .then(result => {
         if(result.status === "success") {
           showStatus(`✓ ကျေးဇူးတင်ပါသည် <strong>${escapeHtml(payload.name)}</strong>။ (${escapeHtml(payload.course)}) သင်တန်းအတွက် စာရင်းပေးသွင်းမှုကို လက်ခံရရှိပါသည်။ သင်တန်းမှူးထံ တင်ပြပြီး အတည်ပြုချက်ရရှိပါက ဖုန်း <strong>${escapeHtml(payload.phone)}</strong> သို့ ပြန်လည်ဆက်သွယ်ပေးပါမည်။<br><br>အရေးကြီးပါက ဖုန်း <strong><a href="tel:0943045506">09 43045506</a></strong> သို့မဟုတ် <a href="https://www.facebook.com/travelcomputertraining" target="_blank" rel="noopener noreferrer">Travel Computer Training Facebook Page</a> သို့လည်း တိုက်ရိုက် ဆက်သွယ်စုံစမ်းနိုင်ပါသည်။`, "success");
