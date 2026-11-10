@@ -220,7 +220,7 @@ document.addEventListener("DOMContentLoaded", () => {
       e.preventDefault();
       const name = document.getElementById("studentName").value.trim();
       const course = document.getElementById("studentCourse").value;
-      alert(`ကျေးဇူးတင်ပါသည် ${name}။ (${course}) သင်တန်းအတွက် စာရင်းပေးသွင်းမှု လက်ခံရရှိပါသည်။ အသေးစိတ်အတည်ပြုရန် ဖုန်း 09 43045506 သို့လည်းကောင်း၊ Travel Computer Training Facebook Page သို့လည်းကောင်း ဆက်သွယ်နိုင်ပါသည်။`);
+      alert(`ကျေးဇူးတင်ပါသည် ${name}။ (${course}) သင်တန်းအတွက် စာရင်းပေးသွင်းမှု (သို့) စုံစမ်းမေးမြန်းမှုကို လက်ခံရရှိပါသည်။ သင်တန်းမှူးထံ တင်ပြပြီး အတည်ပြုချက် ရသောအခါ သင်တန်းမှ ပြန်လည်ဆက်သွယ်ပေးပါမည်။`);
       regForm.reset();
     });
   }
