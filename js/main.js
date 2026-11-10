@@ -213,15 +213,50 @@ document.addEventListener("DOMContentLoaded", () => {
     `).join("");
   }
 
-  // 12. Handle Registration Form
+   // 12. Handle Registration Form
   const regForm = document.getElementById("registrationForm");
+  const submitBtn = document.getElementById("submit");
+  const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbyWU6_xH67GwIAHVbTaBVFfCGn9y-smEfzqATFLJZZElomvuTZgzxb18iT6XgjhZshwTA/exec";
+
   if (regForm) {
     regForm.addEventListener("submit", (e) => {
       e.preventDefault();
-      const name = document.getElementById("studentName").value.trim();
-      const course = document.getElementById("studentCourse").value;
-      alert(`ကျေးဇူးတင်ပါသည် ${name}။ (${course}) သင်တန်းအတွက် စာရင်းပေးသွင်းမှု (သို့) စုံစမ်းမေးမြန်းမှုကို လက်ခံရရှိပါသည်။ သင်တန်းမှူးထံ တင်ပြပြီး အတည်ပြုချက် ရသောအခါ သင်တန်းမှ ပြန်လည်ဆက်သွယ်ပေးပါမည်။`);
-      regForm.reset();
+      const payload = {
+        name: document.getElementById("studentName").value.trim(),
+        age: document.getElementById("studentAge").value.trim(),
+        qualification: document.getElementById("studentEdu").value.trim(),
+        phone: document.getElementById("studentPhone").value.trim(),
+        course: document.getElementById("studentCourse").value.trim(),
+        note: document.getElementById("studentNote").value.trim()
+      };
+
+      const originalBtnText = submit.innerText;
+      submit.disabled = true;
+      submit.innerText = "စာရင်းပေးသွင်းနေပါသည်... ခေတ္တစောင့်ပါ";
+
+      fetch(GOOGLE_SCRIPT_URL, {
+        method: "POST", 
+        body; JSON.stringify(payload)
+      })
+      .then(response => response.json())
+      .then(result => {
+        if(result.status === "success") {
+          alert(`ကျေးဇူးတင်ပါသည် ${payload.name}။ (${payload.course}) သင်တန်းအတွက် စာရင်းပေးသွင်းမှု (သို့) စုံစမ်းမေးမြန်းမှုကို လက်ခံရရှိပါသည်။ သင်တန်းမှူးထံ တင်ပြပြီး အတည်ပြုချက်ရသောအခါ သင်တန်းမှ ပြန်လည်ဆက်သွယ်ပေးပါမည်။`);
+          regForm.reset();
+        } else {
+          alert('စာရင်းပေးရာတွင် အခက်အခဲ ရှိနေပါသည်။ ကျေးဇူးပြု၍ ဖုန်း 09 43045506 သို့ (Travel Computer Training) facebook page သို့ တိုက်ရိုက် ဆက်သွယ်ပေးပါ။ ');
+        }
+      })
+      .catch(error => {
+        console.error("Submission error", error);
+        alert(`ကျေးဇူးတင်ပါသည် ${payload.name} သင်တန်းအတွက် စာရင်းပေးသွင်းမှု လက်ခံရရှိပါသည်။`);
+        regForm.reset();
+      })
+      .finally(() => {
+        submit.disabled = false;
+        submit.innerText = originalBtnText;
+      })
+      
     });
   }
 });
