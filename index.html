@@ -289,26 +289,29 @@
 
         <div id="join" class="form-box">
           <h3>သင်တန်းသားသစ် လျှောက်ထားရန် Form</h3>
-          <form id="registrationForm">
+          <!-- Form Status Message Banner -->
+          <div id="formStatus" class="form-status" role="alert" aria-live="polite"></div>
+          
+          <form id="registrationForm" novalidate>
             <div class="form-group">
               <label for="studentName">အမည် (Name) *</label>
-              <input type="text" id="studentName" required placeholder="သင်၏ အမည်အပြည့်အစုံ">
+              <input type="text" id="studentName" name="studentName" required placeholder="သင်၏ အမည်အပြည့်အစုံ" autocomplete="name">
             </div>
             <div class="form-group">
               <label for="studentAge">အသက် (Age) *</label>
-              <input type="text" id="studentAge" required placeholder="သင်၏ လက်ရှိအသက်">
+              <input type="number" id="studentAge" name="studentAge" required min="10" max="80" placeholder="သင်၏ လက်ရှိအသက် (ဥပမာ - 18)">
             </div>
             <div class="form-group">
               <label for="studentEdu">ပညာအရည်အချင်း (သို့) အလုပ်အကိုင် (Qualifications Or Occupations) *</label>
-              <input type="text" id="studentEdu" required placeholder="သင်၏ ပညာအရည်အချင်း (သို့) အလုပ်အကိုင် ">
+              <input type="text" id="studentEdu" name="studentEdu" required placeholder="သင်၏ ပညာအရည်အချင်း (သို့) အလုပ်အကိုင်">
             </div>
             <div class="form-group">
               <label for="studentPhone">ဖုန်းနံပါတ် (Phone) *</label>
-              <input type="tel" id="studentPhone" required placeholder="09xxxxxxxxx">
+              <input type="tel" id="studentPhone" name="studentPhone" required pattern="^(09|\\+?959)[0-9]{7,9}$" placeholder="09xxxxxxxxx" autocomplete="tel">
             </div>
             <div class="form-group">
               <label for="studentCourse">တက်ရောက်လိုသည့် သင်တန်း *</label>
-              <select id="studentCourse" required>
+              <select id="studentCourse" name="studentCourse" required>
                 <option value="">-- သင်တန်းရွေးချယ်ပါ --</option>
                 <option value="Basic Computer">Basic Computer (Special Office & Kids)</option>
                 <option value="Advanced Excel">Advanced Excel</option>
@@ -320,7 +323,7 @@
             </div>
             <div class="form-group">
               <label for="studentNote">နေရပ်လိပ်စာနှင့် မှတ်ချက်</label>
-              <textarea id="studentNote" rows="3" placeholder="သင်နေထိုင်ရာ ရပ်ကွက်/မြို့နယ် နှင့် မေးမြန်းလိုသည်များ"></textarea>
+              <textarea id="studentNote" name="studentNote" rows="3" placeholder="သင်နေထိုင်ရာ ရပ်ကွက်/မြို့နယ် နှင့် မေးမြန်းလိုသည်များ"></textarea>
             </div>
             <button type="submit" id="submitBtn" class="btn btn-primary btn-full">စာရင်းပေးသွင်းမည်</button>
             <p class="form-privacy-note">* ကျောင်းသားများ၏ ကိုယ်ရေးအချက်အလက်များကို အများပြည်သူသို့ လုံးဝဖော်ပြခြင်းမပြုဘဲ လုံခြုံစွာ သိမ်းဆည်းပါသည်။</p>
