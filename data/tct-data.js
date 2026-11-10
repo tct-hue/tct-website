@@ -33,7 +33,7 @@ const TCT_DATA = {
       "စာရိုက်နှုန်း (WPM)၊ တိကျမှုရာခိုင်နှုန်း (Accuracy %) နှင့် အမှားထောက်ပြစနစ် ပါဝင်ခြင်း",
       "အင်တာနက်မလိုဘဲ (100% Offline) Portable ဖိုင်အဖြစ် တိုက်ရိုက်ဖွင့်သုံးနိုင်ခြင်း"
     ],
-    downloadUrl: "https://github.com/tct-hue/tct-website/releases/download/2.0/TCT-Typing-Tutor.zip",
+    downloadUrl: "downloads/TCT-Typing-Tutor.zip",
     guideText: "ZIP ဖိုင်ကို ဒေါင်းလုဒ်ဆွဲပြီး Password: travelcomputertraining နှင့် Extract (ဖြည်)၍ TCTTypingTutor.exe ကို Install ပြုလုပ်ကာ အသုံးပြုနိုင်ပါသည်။"
   },
 
@@ -46,7 +46,7 @@ const TCT_DATA = {
       version: "2026 Pack",
       size: "ZIP Pack",
       desc: "TCT Typing Tutor တွင် ထည့်သွင်းလေ့ကျင့်နိုင်သော မြန်မာစာပိုဒ်များ၊ ရုံးသုံးစာများနှင့် အင်္ဂလိပ် လေ့ကျင့်ခန်း Text ဖိုင်များ။",
-      downloadUrl: "https://github.com/tct-hue/tct-website/releases/download/2.0/TCT-Typing-Tutor.zip,
+      downloadUrl: "downloads/TCT-Typing-Lessons.zip",
       btnLabel: "Lesson Pack ဒေါင်းလုဒ်ဆွဲရန်"
     },
     {
