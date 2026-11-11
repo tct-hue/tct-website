@@ -323,7 +323,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
       // Myanmar phone number validation
       const phoneRegex = /^(09|\+?959)[0-9]{7,9}$/;
-      const cleanedPhone = payload.phone.replace(/[\s\-]/g, "");
+      const cleanedPhone = payload.phone.replace(/[\s\-\(\)]/g, "");
       if (!phoneRegex.test(cleanedPhone)) {
         showStatus("ကျေးဇူးပြု၍ မှန်ကန်သော ဖုန်းနံပါတ် (ဥပမာ - 0943045506) ကို ထည့်သွင်းပေးပါ။", "error");
         if (phoneInput) phoneInput.focus();
