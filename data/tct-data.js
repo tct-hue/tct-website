@@ -11,12 +11,12 @@ const TCT_DATA = {
     foundedDate: "August 19, 2019",
     founder: "ဦးကောလေး (U Kaw Lay)",
     phone: "09 43045506",
-    facebookUrl: "https://www.facebook.com/travelcomputertraining",
+    facebookUrl: "https://www.facebook.com/share/1NW3YGwN1S/",
     facebookName: "Travel Computer Training",
     currentLocation: "အေးစေတီကျောင်းတိုက်၊ အေးစေတီရပ်ကွက်၊ မြစ်ကြီးနားမြို့ (ယာယီ)",
     operatingRegion: "ကချင်ပြည်နယ် (Kachin State, Myanmar)",
     logoImage: "images/logo.jpg",
-    heroBgImage: "images/hero-bg.jpg"
+    heroBgImage: "../images/hero-bg.jpg"
   },
 
   featuredSoftware: {
@@ -299,9 +299,9 @@ const TCT_DATA = {
     { region: "mohnyin", image: "images/gallery/hopin-practical.jpg", title: "ဟိုပင်မြို့ — လက်တွေ့စာသင်ခန်းမ", desc: "မြဇေယျာရပ်ကွက် သင်တန်းသားများ လက်တွေ့လေ့ကျင့်နေစဉ်" },
     { region: "mohnyin", image: "images/gallery/mogaung-graduation.jpg", title: "မိုးကောင်းမြို့ — ကျွန်းတောရပ်ကွက် သင်တန်းဆင်းပွဲ", desc: "ပထမအကြိမ်နှင့် ဒုတိယအကြိမ် ကွန်ပျူတာသင်တန်းဆင်းပွဲ" },
     { region: "mohnyin", image: "images/gallery/namti-graduation.jpg", title: "နမ္မတီးမြို့ — ရွှေဝါရပ်ကွက် သင်တန်းဆင်းပွဲ", desc: "Round (1) နှင့် Round (2) သင်တန်းဆင်း အောင်လက်မှတ်ရ လူငယ်များ" },
-    { region: "bhamo", image: "images/gallery/bhamo-ml.jpg", title: "မင်းလှစာကြည့်တိုက် သင်တန်းဆင်းပွဲ", desc: "ဗန်းမော် ရပ်ကွက်ပေါင်းစုံမှ Certificate  လူငယ်များ" },
+    { region: "bhamo", image: "images/gallery/bhamo-ml.jpg", title: "မင်းလှစာကြည့်တိုက် သင်တန်းဆင်းပွဲ", desc: "ဗန်းမော် ရပ်ကွက်ပေါင်းစုံမှ Certificate  ရရှိသူ လူငယ်များ" },
     { region: "bhamo", image: "images/gallery/bhamo-kk.jpg", title: "ဗန်းမော်တက္ကသိုလ်အနီး ကျွန်းကုန်း(၂) သင်တန်းဆင်းပွဲ", desc: "ဗန်းမော်တက္ကသိုလ် Major ပေါင်းစုံမှ လူငယ်များ" },
-    { region: "bhamo", image: "images/gallery/bhamo-ucsb.jpg", title: "ကွန်ပျူတာတက္ကသိုလ် (ဗန်းမော်) ရောက် သင်တန်းသားများ", desc: "ကွန်ပျူတာတက္ကသိုလ် (ဗန်းမော်)သို့ တက်ရောက် လူငယ်များ" },
+    { region: "bhamo", image: "images/gallery/bhamo-ucsb.jpg", title: "ကွန်ပျူတာတက္ကသိုလ် (ဗန်းမော်) ရောက် သင်တန်းသားများ", desc: "ကွန်ပျူတာတက္ကသိုလ် (ဗန်းမော်)သို့ ရောက် လူငယ်များ" },
     { region: "bhamo", image: "images/gallery/bhamo-sihe.jpg", title: "ဗန်းမော်ခရိုင် — စီဟဲကျေးရွာ သင်တန်းဆင်းပွဲ", desc: "ကျေးရွာအရောက် လှည့်လည်ဖွင့်လှစ်ခဲ့သော ပညာဒါနသင်တန်း ပုံရိပ်များ" }
   ],
 
