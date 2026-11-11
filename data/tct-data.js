@@ -11,6 +11,7 @@ const TCT_DATA = {
     foundedDate: "August 19, 2019",
     founder: "ဦးကောလေး (U Kaw Lay)",
     phone: "09 43045506",
+    email: "travelcomputertraining@gmail.com",
     facebookUrl: "https://www.facebook.com/share/1NW3YGwN1S/",
     facebookName: "Travel Computer Training",
     currentLocation: "အေးစေတီကျောင်းတိုက်၊ အေးစေတီရပ်ကွက်၊ မြစ်ကြီးနားမြို့ (ယာယီ)",
