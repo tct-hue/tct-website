@@ -65,7 +65,7 @@ const TCT_DATA = {
 
   impactStats: [
     { number: "21+", labelMm: "ဖွင့်လှစ်ခဲ့ပြီးသော သင်တန်းနေရာပေါင်း", labelEn: "Training Locations" },
-    { number: "179+", labelMm: "ကျေးရွာနှင့် ရပ်ကွက်ပေါင်း", labelEn: "Villages & Wards Reached" },
+    { number: "179+", labelMm: "ကျေးရွာနှင့် ရပ်ကွက်များမှ", labelEn: "Villages & Wards Reached" },
     { number: "1,382+", labelMm: "သင်တန်းဆင်း လူငယ်ပေါင်း", labelEn: "Graduated Students" },
     { number: "100%", labelMm: "အာမခံကြေး ပြန်အမ်းသည့် ပညာဒါန", labelEn: "Deposit Refund Guarantee" }
   ],
@@ -89,18 +89,6 @@ const TCT_DATA = {
       nameEn: "Daw Theingi Win",
       roleMm: "အကြီးတန်း သင်တန်းနည်းပြ နှင့် အဖွဲ့ခေါင်းဆောင်",
       roleEn: "Senior Instructor & Team Leader"
-    },
-    {
-      nameMm: "မ",
-      nameEn: "Ma",
-      roleMm: "အကူ သင်တန်းနည်းပြ",
-      roleEn: "Assistant Instructor"
-    },
-    {
-      nameMm: "မောင်",
-      nameEn: "Mg",
-      roleMm: "အထွေထွေ သင်တန်းအကူ",
-      roleEn: "General Assistant"
     }
   ],
 
@@ -290,6 +278,7 @@ const TCT_DATA = {
   ],
 
   gallery: [
+    {region: "myitkyina", image: "images/gallery/myitkyina-ayezedi.jpg", title: "မြစ်ကြီးနားမြို့၊ အေးစေတီသင်တန်း", desc: " ယခုလက်ရှိ ဖွင့်လှစ်နေဆဲ"},
     { region: "myitkyina", image: "images/gallery/myitkyina-pammati.jpg", title: "မြစ်ကြီးနားမြို့ — ပမ္မတီးရပ်ကွက် သင်တန်းဆင်းပွဲ", desc: "Round 1 & Round 2 အောင်လက်မှတ်နှင့် အာမခံကြေး ပြန်လည်ပေးအပ်ပွဲ အမှတ်တရ" },
     { region: "myitkyina", image: "images/gallery/myitkyina-class.jpg", title: "မြစ်ကြီးနားမြို့ — သင်တန်းသား လူငယ်များ", desc: "ပမ္မတီးရပ်ကွက် ကွန်ပျူတာသင်တန်း တက်ရောက်ကြသော သင်တန်းသား/သူများ" },
     { region: "tanai", image: "images/gallery/tanai-classroom.jpg", title: "တနိုင်းမြို့ — အေးသုခရပ်ကွက် ချမ်းမြေ့ရွှေပြည်ကျောင်း", desc: "ကွန်ပျူတာအလုံး ၂၀ ဖြင့် လက်တွေ့လေ့ကျင့် သင်ယူနေကြစဉ်" },
@@ -301,9 +290,15 @@ const TCT_DATA = {
     { region: "mohnyin", image: "images/gallery/mogaung-graduation.jpg", title: "မိုးကောင်းမြို့ — ကျွန်းတောရပ်ကွက် သင်တန်းဆင်းပွဲ", desc: "ပထမအကြိမ်နှင့် ဒုတိယအကြိမ် ကွန်ပျူတာသင်တန်းဆင်းပွဲ" },
     { region: "mohnyin", image: "images/gallery/namti-graduation.jpg", title: "နမ္မတီးမြို့ — ရွှေဝါရပ်ကွက် သင်တန်းဆင်းပွဲ", desc: "Round (1) နှင့် Round (2) သင်တန်းဆင်း အောင်လက်မှတ်ရ လူငယ်များ" },
     { region: "bhamo", image: "images/gallery/bhamo-ml.jpg", title: "မင်းလှစာကြည့်တိုက် သင်တန်းဆင်းပွဲ", desc: "ဗန်းမော် ရပ်ကွက်ပေါင်းစုံမှ Certificate  ရရှိသူ လူငယ်များ" },
+    { region: "bhamo", image: "images/gallery/bhamo-shwekyina.jpg", title: "ရွှေကျီးနား (အ.ထ.က -၆) သင်တန်းဆင်းပွဲ", desc: " ကျီးနား (အ.ထ.က -၆)ကျောင်းသူ/သားများ" },
     { region: "bhamo", image: "images/gallery/bhamo-kk.jpg", title: "ဗန်းမော်တက္ကသိုလ်အနီး ကျွန်းကုန်း(၂) သင်တန်းဆင်းပွဲ", desc: "ဗန်းမော်တက္ကသိုလ် Major ပေါင်းစုံမှ လူငယ်များ" },
     { region: "bhamo", image: "images/gallery/bhamo-ucsb.jpg", title: "ကွန်ပျူတာတက္ကသိုလ် (ဗန်းမော်) ရောက် သင်တန်းသားများ", desc: "ကွန်ပျူတာတက္ကသိုလ် (ဗန်းမော်)သို့ ရောက် လူငယ်များ" },
-    { region: "bhamo", image: "images/gallery/bhamo-sihe.jpg", title: "ဗန်းမော်ခရိုင် — စီဟဲကျေးရွာ သင်တန်းဆင်းပွဲ", desc: "ကျေးရွာအရောက် လှည့်လည်ဖွင့်လှစ်ခဲ့သော ပညာဒါနသင်တန်း ပုံရိပ်များ" }
+    { region: "bhamo", image: "images/gallery/bhamo-sihe.jpg", title: "ဗန်းမော်ခရိုင် — စီဟဲကျေးရွာ သင်တန်းဆင်းပွဲ", desc: "ကျေးရွာအရောက် လှည့်လည်ဖွင့်လှစ်ခဲ့သော ပညာဒါနသင်တန်း ပုံရိပ်များ" },
+    { region: "bhamo", image: "images/gallery/bhamo-mmk.jpg", title: "ဟန်ထက်-မံမကောက်", desc: "မံစီမြို့နယ် လူရည်ချွန်ဆုရှင် တက်သစ်စ ဆရာမလေး မသိင်္ဂီဝင်းမှ သင်ကြားပေးနေခြင်း "},
+    { region: "bhamo", image: "images/gallery/bhamo-myalai.jpg", title: "မြလယ် ခါနန်လီဆူဘုရားကျောင်း", desc: "လီဆူလက်ထောက်ဆရာမလေးမှ လီဆူလူငယ်များအား သင်ကြားပေးနေစဉ်"},
+    { region: "bhamo", image: "images/gallery/bhamo-kt.jpg", title: "ကောင်းတုံ (အ.ထ.က-ခွဲ)- နွေရာသီသင်တန်း", desc: " ကျောင်းသူ/သားများ လက်တွေ့ လေ့ကျင့်နေစဉ်"},
+    { region: "bhamo", image: "images/gallery/sinbo.jpg", title: "ဆင်ဘို - မြင်သာ", desc: "မြင်သာရောက် တာဝန်ကျ ဆရာမများ သင်ယူနေစဉ်"},
+    { region: "bhamo", image: "images/gallery/bhamo-shl.jpg", title: "ဗန်းမော်ခရိုင် - ထီးလင်းရွာ သက်တန်းဆင်းပွဲ", desc: "မံမလင်းတိုက်နယ် ကျေးရွာများမှ သင်တန်းသူ/သားများ"}
   ],
 
   faqs: [
