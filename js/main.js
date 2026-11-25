@@ -170,7 +170,7 @@ document.addEventListener("DOMContentLoaded", () => {
     <a href="${escapeHtml(sw.portableDownloadUrl)}"
        download
        class="btn btn-primary btn-full">
-      ⬇ Portable Version ဒေါင်းလုဒ်ဆွဲရန်
+      ⬇ Download Portable Version
     </a>
   </div>
       </div>
