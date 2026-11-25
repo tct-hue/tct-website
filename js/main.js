@@ -219,17 +219,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // 10. Render Gallery with Regional Filter
   const galleryContainer = document.getElementById("galleryContainer");
-  const renderGallery = (region = "all") => {
+  const renderGallery = (region = "all", limit = null) => {
     if (!galleryContainer || !Array.isArray(TCT_DATA.gallery)) return;
 
-    const filtered = region === "all"
-      ? TCT_DATA.gallery
+    let filtered = region === "all"
+      ? [...TCT_DATA.gallery]
       : TCT_DATA.gallery.filter(g => g.region === region);
 
-    if (filtered.length === 0) {
-      galleryContainer.innerHTML = `<p style="grid-column: 1/-1; text-align: center; color: var(--text-muted); padding: 2rem;">ဤဒေသအတွက် ဓာတ်ပုံမှတ်တမ်း မရှိသေးပါ။</p>`;
-      return;
-    }
+if (limit !== null) {
+  filtered = filtered.slice(0, limit);
+}
 
     galleryContainer.innerHTML = filtered.map(g => `
       <div class="gallery-card">
@@ -243,7 +242,7 @@ document.addEventListener("DOMContentLoaded", () => {
   };
 
   if (galleryContainer) {
-    renderGallery("all");
+    renderGallery("all", 4);
     document.querySelectorAll(".gallery-filter-btn").forEach(btn => {
       btn.addEventListener("click", () => {
         document.querySelectorAll(".gallery-filter-btn").forEach(b => b.classList.remove("active"));
