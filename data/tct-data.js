@@ -35,7 +35,9 @@ const TCT_DATA = {
       "အင်တာနက်မလိုဘဲ (100% Offline) Portable ဖိုင်အဖြစ် တိုက်ရိုက်ဖွင့်သုံးနိုင်ခြင်း"
     ],
     downloadUrl: "https://github.com/tct-hue/TCT-TypingTutor/releases/download/v2.0/TCT-Typing-Tutor-Windows-Installer.zip",
-    guideText: "ZIP ဖိုင်ကို ဒေါင်းလုဒ်ဆွဲ၊ Extract (ဖြည်)၍ TCTTypingApp_Setup_v2.exe ကို Install ပြုလုပ်ကာ အသုံးပြုနိုင်ပါသည်။"
+    guideText: "ZIP ဖိုင်ကို ဒေါင်းလုဒ်ဆွဲ၊ Extract (ဖြည်)၍ TCTTypingApp_Setup_v2.exe ကို Install ပြုလုပ်ကာ အသုံးပြုနိုင်ပါသည်။",
+portableDownloadUrl: "https://github.com/tct-hue/TCT-TypingTutor/releases/download/v2.0/TCT-Typing-Tutor-Portable.zip",
+portableGuideText: "Portable ZIP ကို ဒေါင်းလုဒ်ဆွဲပြီး Extract (ဖြည်)ကာ တိုက်ရိုက်ဖွင့်၍ အသုံးပြုနိုင်ပါသည်။"
   },
 
   softwareDownloads: [
