@@ -164,6 +164,20 @@ document.addEventListener("DOMContentLoaded", () => {
           <p style="font-size:0.85rem; color:#E2E8F0; margin-bottom:1.2rem;">${escapeHtml(sw.guideText)}</p>
           <a href="${escapeHtml(sw.downloadUrl)}" download class="btn btn-primary btn-full">⬇ Download TCT Typing Tutor</a>
         </div>
+<div class="software-download-panel">
+    <div class="typing-preview-icon">⌨️</div>
+    <h4 style="color:var(--gold); margin-bottom:0.5rem;">
+      Portable Version
+    </h4>
+    <p style="font-size:0.85rem; color:#E2E8F0; margin-bottom:1.2rem;">
+      ${escapeHtml(sw.portableGuideText)}
+    </p>
+    <a href="${escapeHtml(sw.portableDownloadUrl)}"
+       download
+       class="btn btn-primary btn-full">
+      ⬇ Portable Version ဒေါင်းလုဒ်ဆွဲရန်
+    </a>
+  </div>
       </div>
     `;
   }
