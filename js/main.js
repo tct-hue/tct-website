@@ -170,7 +170,7 @@ document.addEventListener("DOMContentLoaded", () => {
     <a href="${escapeHtml(sw.portableDownloadUrl)}"
        download
        class="btn btn-primary btn-full">
-      ⬇ Download Portable Version
+      ⬇ Download Selfcontained(Portable) App
     </a>
   </div>
       </div>
